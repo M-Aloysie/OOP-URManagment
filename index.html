@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>University Residence Management System</title>
+    <script src="management.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            background: #333;
+            color: #fff;
+            border: 0;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background: #555;
+        }
+        .output {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .output h3 {
+            margin-top: 0;
+        }
+    </style>
+   
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>University Residence Management System</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="form-container">
+            <h2>Add Student</h2>
+            <form id="addStudentForm">
+                <input type="text" id="studentName" placeholder="Student Name" required>
+                <input type="text" id="studentId" placeholder="Student ID" required>
+                <input type="text" id="studentGender" placeholder="Student Gender" required>
+                <input type="submit" value="Add Student">
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h2>Assign Residence</h2>
+            <form id="assignResidenceForm">
+                <input type="text" id="assignStudentId" placeholder="Student ID" required>
+                <input type="text" id="residenceName" placeholder="Residence Name" required>
+                <input type="text" id="residenceType" placeholder="Residence Type (DormRoom/Apartment)" required>
+                <input type="text" id="residenceAddress" placeholder="Residence Address" required>
+                <input type="number" id="sizeOrBedrooms" placeholder="Size (DormRoom) or Number of Bedrooms (Apartment)" required>
+                <input type="submit" value="Assign Residence">
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h2>Create Maintenance Request</h2>
+            <form id="createRequestForm">
+                <input type="text" id="requestDescription" placeholder="Request Description" required>
+                <input type="text" id="requestSubmittedBy" placeholder="Submitted By (Student Name)" required>
+                <input type="submit" value="Create Request">
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h2>Add Employee</h2>
+            <form id="addEmployeeForm">
+                <input type="text" id="employeeName" placeholder="Employee Name" required>
+                <input type="text" id="employeeId" placeholder="Employee ID" required>
+                <input type="text" id="employeeRole" placeholder="Employee Role" required>
+                <input type="submit" value="Add Employee">
+            </form>
+        </div>
+
+        <div class="output" id="studentsOutput">
+            <h3>Students</h3>
+        </div>
+
+        <div class="output" id="requestsOutput">
+            <h3>Maintenance Requests</h3>
+        </div>
+
+        <div class="output" id="employeesOutput">
+            <h3>Employees</h3>
+        </div>
+    </section>
+</body>
+</html>
